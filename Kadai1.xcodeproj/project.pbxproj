@@ -58,13 +58,29 @@
 			children = (
 				8A893EFD26C224E200CD5DE5 /* AppDelegate.swift */,
 				8A893EFF26C224E200CD5DE5 /* SceneDelegate.swift */,
-				8A893F0126C224E200CD5DE5 /* ViewController.swift */,
-				8A893F0326C224E200CD5DE5 /* Main.storyboard */,
+				8A893F1426C2265100CD5DE5 /* View */,
+				8A893F1226C2263A00CD5DE5 /* Controller */,
 				8A893F0626C224E300CD5DE5 /* Assets.xcassets */,
 				8A893F0826C224E300CD5DE5 /* LaunchScreen.storyboard */,
 				8A893F0B26C224E300CD5DE5 /* Info.plist */,
 			);
 			path = Kadai1;
+			sourceTree = "<group>";
+		};
+		8A893F1226C2263A00CD5DE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8A893F0126C224E200CD5DE5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8A893F1426C2265100CD5DE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A893F0326C224E200CD5DE5 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
