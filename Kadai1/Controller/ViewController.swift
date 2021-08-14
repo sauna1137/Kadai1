@@ -7,45 +7,35 @@
 
 import UIKit
 
-class ViewController: UIViewController,
-                      UITextFieldDelegate{
+class ViewController: UIViewController{
     
-    
-    var textField = UITextField()
-    var textFieldArray = [UITextField]()
-    var resultCount = Int()
-    
+    private var textFieldArray = [UITextField]()
     @IBOutlet weak var resultLabel: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 0...4{
-            textField = UITextField(frame: CGRect(x: 50, y: CGFloat(50 * (i+2)), width: 150, height: 34))
+        for arrays in 0...4{
+            let textField = UITextField(frame: CGRect(x: 50, y: CGFloat(50 * (arrays+2)), width: 150, height: 34))
             textField.borderStyle = .roundedRect
             textField.keyboardType = .numberPad
             textFieldArray.append(textField)
-            self.view.addSubview(textField)
+            view.addSubview(textField)
         }
     }
     
-    
     @IBAction func showResultButton(_ sender: Any) {
-        
         caluculateResult()
         view.endEditing(true)
-        
     }
     
-    
     func caluculateResult(){
+        var resultCount = 0
         
-        resultCount = 0
-        
-        for i in 0...4{
-            if let inputCount = Int(textFieldArray[i].text!){
-                resultCount = inputCount + resultCount
+        for arrays in 0...textFieldArray.count - 1{
+            if let inputCount = Int(textFieldArray[arrays].text!){
+                resultCount += inputCount
             }
         }
         resultLabel.text = String(resultCount)
@@ -54,12 +44,4 @@ class ViewController: UIViewController,
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
-    
-    
-    
-    
-    
-    
 }
-
